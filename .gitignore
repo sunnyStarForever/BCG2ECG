@@ -1,0 +1,41 @@
+# ── 数据（绝不推送）──
+data/
+*.npz
+*.npy
+*.mat
+
+# ── Med2ECG 第三方仓库 + 模型/日志 ──
+Med2ECG/
+
+# ── 相关论文 (涉版权, 不入库) ──
+相关论文/
+
+# ── 日志 ──
+*.log
+
+# ── 模型权重 ──
+*.pt
+*.ckp
+*.pth
+*.onnx
+*.h5
+
+# ── 临时文件 ──
+tmp/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ── 环境 ──
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ── IDE / OS ──
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

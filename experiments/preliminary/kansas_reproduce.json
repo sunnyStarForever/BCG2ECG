@@ -1,0 +1,153 @@
+{
+  "protocol": {
+    "dataset": "Kansas",
+    "segment_sec": 10,
+    "fs_hz": 1000,
+    "bcg_channels": "4 Film + best LC + Film0 envelope (6)",
+    "references": {
+      "BiLSTM_PCC": 0.896,
+      "BiM-Diff_PCC": 0.984,
+      "Morokuma_RRI_MAE_ms": 34
+    },
+    "epochs": 30,
+    "split": "LOSO"
+  },
+  "results": {
+    "tcn": {
+      "median_pcc": 0.23166140167267463,
+      "median_pcc_delay_tolerant": 0.47328780591487885,
+      "median_rri_mae_ms": 213.41362126245846,
+      "n_folds": 5,
+      "folds": [
+        {
+          "fold": 0,
+          "test_subject": 0,
+          "median_pcc": 0.5920848413409368,
+          "mean_pcc": 0.5975017346330131,
+          "median_pcc_delay_tolerant": 0.7381957471370697,
+          "median_nrmse": 0.865535169839859,
+          "n": 44,
+          "rri_mae_ms": 281.92087912087914,
+          "rri_median_mae_ms": 385.99999999999994,
+          "n_beats": 455
+        },
+        {
+          "fold": 1,
+          "test_subject": 1,
+          "median_pcc": 0.05489421217474612,
+          "mean_pcc": 0.05997406036974138,
+          "median_pcc_delay_tolerant": 0.15492389351129532,
+          "median_nrmse": 1.2630244493484497,
+          "n": 42,
+          "rri_mae_ms": 213.41362126245846,
+          "rri_median_mae_ms": 284.00000000000006,
+          "n_beats": 602
+        },
+        {
+          "fold": 2,
+          "test_subject": 2,
+          "median_pcc": 0.23166140167267463,
+          "mean_pcc": 0.24482426671081506,
+          "median_pcc_delay_tolerant": 0.47328780591487885,
+          "median_nrmse": 1.0479553937911987,
+          "n": 40,
+          "rri_mae_ms": 154.41304347826087,
+          "rri_median_mae_ms": 71.0,
+          "n_beats": 506
+        },
+        {
+          "fold": 3,
+          "test_subject": 3,
+          "median_pcc": 0.26938480950133675,
+          "mean_pcc": 0.2596341267553615,
+          "median_pcc_delay_tolerant": 0.5354134440422058,
+          "median_nrmse": 1.05535089969635,
+          "n": 41,
+          "rri_mae_ms": 160.03832116788323,
+          "rri_median_mae_ms": 109.49999999999999,
+          "n_beats": 548
+        },
+        {
+          "fold": 4,
+          "test_subject": 4,
+          "median_pcc": 0.170442274806795,
+          "mean_pcc": 0.1701579579240397,
+          "median_pcc_delay_tolerant": 0.2536563128232956,
+          "median_nrmse": 1.116900086402893,
+          "n": 42,
+          "rri_mae_ms": 218.58549222797927,
+          "rri_median_mae_ms": 263.0,
+          "n_beats": 579
+        }
+      ]
+    },
+    "bilstm": {
+      "median_pcc": 0.2979156462095113,
+      "median_pcc_delay_tolerant": 0.3022083342075348,
+      "median_rri_mae_ms": 176.52930728241563,
+      "n_folds": 5,
+      "folds": [
+        {
+          "fold": 0,
+          "test_subject": 0,
+          "median_pcc": 0.6480080636498051,
+          "mean_pcc": 0.6475437038526816,
+          "median_pcc_delay_tolerant": 0.8307195901870728,
+          "median_nrmse": 0.8261553645133972,
+          "n": 44,
+          "rri_mae_ms": 71.23008849557522,
+          "rri_median_mae_ms": 6.000000000000005,
+          "n_beats": 452
+        },
+        {
+          "fold": 1,
+          "test_subject": 1,
+          "median_pcc": 0.2979156462095113,
+          "mean_pcc": 0.30525255740764773,
+          "median_pcc_delay_tolerant": 0.3022083342075348,
+          "median_nrmse": 1.013813078403473,
+          "n": 42,
+          "rri_mae_ms": 212.1701244813278,
+          "rri_median_mae_ms": 35.00000000000003,
+          "n_beats": 482
+        },
+        {
+          "fold": 2,
+          "test_subject": 2,
+          "median_pcc": 0.11052925432405507,
+          "mean_pcc": 0.1224874975084802,
+          "median_pcc_delay_tolerant": 0.17588863521814346,
+          "median_nrmse": 1.0834015607833862,
+          "n": 40,
+          "rri_mae_ms": 187.1769383697813,
+          "rri_median_mae_ms": 177.00000000000006,
+          "n_beats": 503
+        },
+        {
+          "fold": 3,
+          "test_subject": 3,
+          "median_pcc": 0.4635905068161944,
+          "mean_pcc": 0.4614904746437176,
+          "median_pcc_delay_tolerant": 0.5122644305229187,
+          "median_nrmse": 0.9302921891212463,
+          "n": 41,
+          "rri_mae_ms": 111.21374045801527,
+          "rri_median_mae_ms": 24.00000000000002,
+          "n_beats": 524
+        },
+        {
+          "fold": 4,
+          "test_subject": 4,
+          "median_pcc": 0.2304737849067731,
+          "mean_pcc": 0.2289283422612677,
+          "median_pcc_delay_tolerant": 0.2970820963382721,
+          "median_nrmse": 1.0682071447372437,
+          "n": 42,
+          "rri_mae_ms": 176.52930728241563,
+          "rri_median_mae_ms": 85.00000000000007,
+          "n_beats": 563
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "protocol": {
+    "heart_rate": "5-fold subject-disjoint GroupKFold",
+    "posture": "5-fold subject-disjoint GroupKFold",
+    "waveform": "fixed 80/20 subject-disjoint split; 5 s at 25 Hz",
+    "warning": "Screening results, not final model selection."
+  },
+  "direct_heart_rate": {
+    "bcg_cardiac_psd_0.8_3Hz": {
+      "mae_bpm": 22.39095744680851,
+      "median_ae_bpm": 22.0,
+      "rmse_bpm": 25.60647358309422,
+      "within_3_bpm": 0.05452127659574468,
+      "within_5_bpm": 0.08643617021276596,
+      "r2": -5.064945046252719,
+      "correlation": 0.0684866938492726,
+      "n": 752
+    },
+    "bcg_high_envelope_psd_0.8_3Hz": {
+      "mae_bpm": 25.81781914893617,
+      "median_ae_bpm": 24.0,
+      "rmse_bpm": 30.849475839541718,
+      "within_3_bpm": 0.05452127659574468,
+      "within_5_bpm": 0.08909574468085106,
+      "r2": -7.802841904349657,
+      "correlation": -0.0754637955940382,
+      "n": 752
+    },
+    "ppg_ir_peak_detector": {
+      "mae_bpm": 4.85904255319149,
+      "median_ae_bpm": 2.0,
+      "rmse_bpm": 8.486848398827497,
+      "within_3_bpm": 0.5877659574468085,
+      "within_5_bpm": 0.711436170212766,
+      "r2": 0.3337760941728882,
+      "correlation": 0.6840280729941446,
+      "n": 752
+    },
+    "ppg_red_peak_detector": {
+      "mae_bpm": 5.138297872340425,
+      "median_ae_bpm": 2.0,
+      "rmse_bpm": 8.911503443135803,
+      "within_3_bpm": 0.5611702127659575,
+      "within_5_bpm": 0.6914893617021277,
+      "r2": 0.2654366063068623,
+      "correlation": 0.657880903183601,
+      "n": 752
+    },
+    "ppg_mean_peak_detector": {
+      "mae_bpm": 4.929521276595745,
+      "median_ae_bpm": 2.0,
+      "rmse_bpm": 8.581353486459724,
+      "within_3_bpm": 0.601063829787234,
+      "within_5_bpm": 0.7207446808510638,
+      "r2": 0.31885604399623424,
+      "correlation": 0.677934476962482,
+      "n": 752
+    }
+  },
+  "learned_heart_rate": {
+    "bcg_ridge": {
+      "mae_bpm": 8.353477001190186,
+      "median_ae_bpm": 6.973468780517578,
+      "rmse_bpm": 10.84006545400264,
+      "within_3_bpm": 0.23537234042553193,
+      "within_5_bpm": 0.3949468085106383,
+      "r2": -0.08690386352759849,
+      "correlation": 0.11967624014793016,
+      "n": 752
+    },
+    "bcg_extra_trees": {
+      "mae_bpm": 8.132229821006415,
+      "median_ae_bpm": 6.822549603174622,
+      "rmse_bpm": 10.490085458495198,
+      "within_3_bpm": 0.2393617021276596,
+      "within_5_bpm": 0.37898936170212766,
+      "r2": -0.017853737944256043,
+      "correlation": 0.12762197191241412,
+      "n": 752
+    },
+    "bcg_plus_posture_extra_trees": {
+      "mae_bpm": 8.153583644672409,
+      "median_ae_bpm": 6.965119047619076,
+      "rmse_bpm": 10.533517713779446,
+      "within_3_bpm": 0.23404255319148937,
+      "within_5_bpm": 0.3976063829787234,
+      "r2": -0.026299655839763236,
+      "correlation": 0.15701993251718696,
+      "n": 752
+    },
+    "bcg_plus_pressure_extra_trees": {
+      "mae_bpm": 8.090439276177765,
+      "median_ae_bpm": 6.979980158730186,
+      "rmse_bpm": 10.426207652719958,
+      "within_3_bpm": 0.24432576769025366,
+      "within_5_bpm": 0.38451268357810414,
+      "r2": -0.0021273307963785015,
+      "correlation": 0.17486338309422017,
+      "n": 749
+    },
+    "pressure_only_extra_trees": {
+      "mae_bpm": 8.054305253626264,
+      "median_ae_bpm": 6.753134920634892,
+      "rmse_bpm": 10.432204846507055,
+      "within_3_bpm": 0.2389853137516689,
+      "within_5_bpm": 0.3751668891855808,
+      "r2": -0.003280517165917818,
+      "correlation": 0.1996729735272447,
+      "n": 749
+    },
+    "ppg_extra_trees": {
+      "mae_bpm": 5.159469997994765,
+      "median_ae_bpm": 3.40101190476193,
+      "rmse_bpm": 7.863737660666351,
+      "within_3_bpm": 0.4574468085106383,
+      "within_5_bpm": 0.636968085106383,
+      "r2": 0.42801405560508343,
+      "correlation": 0.6547159946719624,
+      "n": 752
+    }
+  },
+  "pressure_posture": {
+    "balanced_accuracy": 0.8044709576138148,
+    "fold_balanced_accuracy": [
+      0.8934946392350043,
+      0.8596891387255681,
+      0.767816009557945,
+      0.7412837162837163,
+      0.7709837429595494
+    ],
+    "confusion_matrix": [
+      [
+        125,
+        7,
+        11,
+        3,
+        1
+      ],
+      [
+        23,
+        92,
+        8,
+        14,
+        3
+      ],
+      [
+        11,
+        19,
+        108,
+        9,
+        3
+      ],
+      [
+        8,
+        7,
+        1,
+        135,
+        5
+      ],
+      [
+        2,
+        6,
+        0,
+        3,
+        145
+      ]
+    ],
+    "class_order": [
+      "Supine",
+      "Right Side",
+      "Left Side",
+      "Prone",
+      "Sit"
+    ],
+    "n": 749
+  },
+  "linear_waveform_mapping": {
+    "bcg_linear": {
+      "median_direct_correlation": -0.007353581874891043,
+      "mean_direct_correlation": -0.0027370825934354254,
+      "median_maxlag_correlation": 0.1928427293896675,
+      "median_nrmse": 1.0317623615264893,
+      "n_segments": 900
+    },
+    "bcg_plus_pressure_linear": {
+      "median_direct_correlation": -0.00790976257058516,
+      "mean_direct_correlation": -0.0028482195427349775,
+      "median_maxlag_correlation": 0.1904176101088524,
+      "median_nrmse": 1.0333843231201172,
+      "n_segments": 900
+    },
+    "ppg_linear_upper_bound": {
+      "median_direct_correlation": 0.14556335052457592,
+      "mean_direct_correlation": 0.13150819766447824,
+      "median_maxlag_correlation": 0.30308791995048523,
+      "median_nrmse": 1.006283462047577,
+      "n_segments": 900
+    },
+    "split": {
+      "train_subjects": 24,
+      "test_subjects": 6,
+      "test_subject_indices": [
+        8,
+        9,
+        15,
+        17,
+        23,
+        27
+      ]
+    }
+  }
+}

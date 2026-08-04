@@ -1,0 +1,31 @@
+{
+  "purpose": "Provenance record for the refactored pressure hardware layout.",
+  "raw_sensor_count": 1056,
+  "mapped_shape": [
+    77,
+    32
+  ],
+  "layout_matrix": {
+    "file": "pressure_layout_map.npz",
+    "shape": [
+      2464,
+      1056
+    ],
+    "nonzero_coefficients": 2306,
+    "coefficient_values": [
+      0.5,
+      1.0
+    ],
+    "sha256": "D49513A889EBA6D9948631B46FC0B34DB997A50EA3496933864ADCCC0417A10D"
+  },
+  "reference_sources_before_removal": {
+    "pressure_to_array.py_sha256": "62D79850EA835258DEE539710BDA1294BB20F7E5A52D5B5229457B71FB3DAE2A",
+    "pressure_processor.py_sha256": "EE2B8C0F62D441B576C96889FC99619B4004B8C95A427901AC8F976DBF2493CF"
+  },
+  "equivalence_checks": {
+    "hardware_mapping_random_input_max_abs_error": 0.0,
+    "gap_interpolation_max_abs_error_vs_reference_griddata": 0.0001220703125,
+    "otsu": "Matches skimage thresholding in the original pressure-value domain within float32 precision."
+  },
+  "intentional_correction": "The legacy OTSU code calculated a threshold on a 0-255 rescaling and compared it with raw pressure values. The refactor applies the threshold in the original pressure-value domain."
+}

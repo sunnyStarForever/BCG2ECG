@@ -1,0 +1,90 @@
+{
+  "dataset": {
+    "subjects": 30,
+    "windows": 752,
+    "window_seconds": 30
+  },
+  "objective_example_selection": {
+    "representative": {
+      "subject_id": "S002",
+      "window_index": 15,
+      "posture": "Right Side"
+    },
+    "artifact_burden_p95": {
+      "subject_id": "S016",
+      "window_index": 16,
+      "posture": "Left Side",
+      "severity_percentile": 0.9506008010680908
+    }
+  },
+  "spectral_concentration": {
+    "resp_raw": {
+      "median": 0.8778711190620819,
+      "q25": 0.7870152884128857,
+      "q75": 0.9365475123805956
+    },
+    "resp_processed": {
+      "median": 0.9911437326654254,
+      "q25": 0.9818149645191381,
+      "q75": 0.996443889769689
+    },
+    "card_raw": {
+      "median": 0.07709722840982537,
+      "q25": 0.038863979383658556,
+      "q75": 0.14468808912579562
+    },
+    "card_processed": {
+      "median": 0.9200668025054939,
+      "q25": 0.878337998350251,
+      "q75": 0.9541591681951459
+    },
+    "ecg_raw": {
+      "median": 0.8152190802548283,
+      "q25": 0.6120217772544512,
+      "q75": 0.9341070115855643
+    },
+    "ecg_processed": {
+      "median": 0.9708835728924725,
+      "q25": 0.9322103425384383,
+      "q75": 0.9852289211173737
+    },
+    "ppg_raw": {
+      "median": 0.6579829694510517,
+      "q25": 0.37046929832666886,
+      "q75": 0.8632583608478268
+    },
+    "ppg_processed": {
+      "median": 0.9937685514878805,
+      "q25": 0.9748641360723249,
+      "q75": 0.9980397002543964
+    }
+  },
+  "event_and_teacher_agreement": {
+    "ppg_ecg_hr_correlation": 0.677934476962482,
+    "ppg_ecg_hr_mae_bpm": 4.929521276595745,
+    "bland_altman_bias_bpm": -2.8763297872340425,
+    "bland_altman_lower_bpm": -18.733371038541247,
+    "bland_altman_upper_bpm": 12.98071146407316
+  },
+  "pressure_processing_audit": {
+    "subject_id": "S002",
+    "window_index": 15,
+    "posture": "Right Side",
+    "frame_index": 14,
+    "otsu_threshold_raw_units": 1273.033447265625,
+    "foreground_fraction": 0.09780844155844155,
+    "mapped_rows": 77,
+    "mapped_columns": 32
+  },
+  "quality_gate": {
+    "signal_quality_gate_pass_fraction": 0.8882978723404256,
+    "ppg_teacher_gate_pass_fraction": 0.8723404255319149,
+    "pressure_valid_fraction": 0.9960106382978723
+  },
+  "notes": [
+    "All cohort spectral summaries use all 752 windows.",
+    "Representative window is a multivariate quality medoid; it was not hand-picked.",
+    "Artifact example is nearest the 95th percentile of a prespecified artifact score.",
+    "Pressure uses the supplied hardware mapping from 1056 channels to 77x32."
+  ]
+}

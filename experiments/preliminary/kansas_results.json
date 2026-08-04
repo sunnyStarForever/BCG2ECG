@@ -1,0 +1,113 @@
+{
+  "protocol": {
+    "dataset": "Kansas Bed-BCG (Carlson 2020)",
+    "task": "BCG->ECG waveform + RRI",
+    "references": {
+      "BiM-Diff PCC": 0.984,
+      "BiLSTM PCC": 0.896,
+      "Morokuma RRI MAE": "34ms"
+    },
+    "split": "LOSO (first N folds)",
+    "epochs": 4,
+    "fs_hz": 1000,
+    "window_sec": 30
+  },
+  "results": {
+    "A_tcn": {
+      "median_pcc": 0.3395198146071612,
+      "mean_pcc": 0.3151050157498058,
+      "median_maxlag_pcc": 0.3626423627138138,
+      "median_rri_mae_ms": 289.92706333973126,
+      "n_folds": 3,
+      "folds": [
+        {
+          "fold": 0,
+          "test_subject": 0,
+          "median_pcc": 0.5111587300808174,
+          "mean_pcc": 0.5099159487299778,
+          "median_maxlag_pcc": 0.5530039668083191,
+          "median_nrmse": 0.8762102425098419,
+          "n": 14,
+          "rri_mae_ms": 442.56060606060606,
+          "rri_median_mae_ms": 456.0,
+          "rri_corr": 0.02754609053028155,
+          "n_beats": 462
+        },
+        {
+          "fold": 1,
+          "test_subject": 1,
+          "median_pcc": 0.3395198146071612,
+          "mean_pcc": 0.34381688301438346,
+          "median_maxlag_pcc": 0.3626423627138138,
+          "median_nrmse": 0.9459835588932037,
+          "n": 14,
+          "rri_mae_ms": 172.62857142857143,
+          "rri_median_mae_ms": 184.50000000000003,
+          "rri_corr": -0.0027392678152766167,
+          "n_beats": 630
+        },
+        {
+          "fold": 2,
+          "test_subject": 2,
+          "median_pcc": 0.09463650256143893,
+          "mean_pcc": 0.08694002868659315,
+          "median_maxlag_pcc": 0.2775411903858185,
+          "median_nrmse": 1.0163509845733643,
+          "n": 13,
+          "rri_mae_ms": 289.92706333973126,
+          "rri_median_mae_ms": 303.0,
+          "rri_corr": -0.02272702956945481,
+          "n_beats": 521
+        }
+      ]
+    },
+    "B_bilstm": {
+      "median_pcc": 0.2749343641795232,
+      "mean_pcc": 0.24572322616690748,
+      "median_maxlag_pcc": 0.2772548347711563,
+      "median_rri_mae_ms": 310.53358925143954,
+      "n_folds": 3,
+      "folds": [
+        {
+          "fold": 0,
+          "test_subject": 0,
+          "median_pcc": 0.3619499374505705,
+          "mean_pcc": 0.3584492695755328,
+          "median_maxlag_pcc": 0.4219778925180435,
+          "median_nrmse": 0.9440625905990601,
+          "n": 14,
+          "rri_mae_ms": 449.3030303030303,
+          "rri_median_mae_ms": 455.5,
+          "rri_corr": -0.00545900283149096,
+          "n_beats": 462
+        },
+        {
+          "fold": 1,
+          "test_subject": 1,
+          "median_pcc": 0.2749343641795232,
+          "mean_pcc": 0.28798443780247024,
+          "median_maxlag_pcc": 0.2772548347711563,
+          "median_nrmse": 0.9643172025680542,
+          "n": 14,
+          "rri_mae_ms": 203.24603174603175,
+          "rri_median_mae_ms": 275.5,
+          "rri_corr": 0.004158554625410976,
+          "n_beats": 630
+        },
+        {
+          "fold": 2,
+          "test_subject": 2,
+          "median_pcc": 0.10028537687062863,
+          "mean_pcc": 0.09945643352571779,
+          "median_maxlag_pcc": 0.10821688920259476,
+          "median_nrmse": 1.0070401430130005,
+          "n": 13,
+          "rri_mae_ms": 310.53358925143954,
+          "rri_median_mae_ms": 337.0,
+          "rri_corr": -0.019636596373457042,
+          "n_beats": 521
+        }
+      ]
+    }
+  }
+}
