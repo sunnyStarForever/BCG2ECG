@@ -18,9 +18,11 @@
 │   ├── experiments/        # 实验脚本 (PPG→ECG, Kansas 复现等)
 │   ├── exploration/        # 诊断探索脚本
 │   └── _archive/           # 废弃的重复实现
+├── docs/                   # 研究方向与实验报告文档 (md)
 ├── experiments/            # 实验结果 (JSON + 图表)
+├── logs/                   # 训练/实验日志 (不入库)
 ├── data/                   # 信号数据 (不入库, gitignore)
-└── *.md                    # 研究方向与实验报告文档
+└── README.md               # 项目说明
 ```
 
 ## 核心发现
